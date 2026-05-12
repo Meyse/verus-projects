@@ -1,13 +1,12 @@
-name: "raw.verus.trading"
+name: "markets.verus.trading"
 slug: "raw-verus-trading"
 description: "Barebones reserve data for Verus liquidity pools"
 longDescription: |
-  raw.verus.trading provides direct reserve data for Verus basket currencies and liquidity pools.
+  markets.verus.trading provides direct reserve data for Verus basket currencies and liquidity pools.
 
 category: "dashboard"
-websiteUrl: "https://raw.verus.trading"
+websiteUrl: "https://markets.verus.trading"
 verusFeatures:
   - DeFi
   - Currencies
   - Data
-

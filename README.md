@@ -29,8 +29,8 @@ be eligible for the Featured section.
 
 Recommended image sizes:
 
-- Logo: `512x512px`, square, PNG or WebP preferred.
-- Featured image: `1200x400px`, `3:1` aspect ratio, PNG or WebP preferred.
+- Logo: `128x128px`, square, PNG or WebP preferred.
+- Featured image: `800x300px`, `8:3` aspect ratio, PNG or WebP preferred.
 - Screenshots: at least `1200px` wide.
 
 Projects with a featured image are eligible for a random 24-hour rotation in

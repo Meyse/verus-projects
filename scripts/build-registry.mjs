@@ -217,8 +217,8 @@ async function validateImageDimensions(projectDir, assets, fileLabel) {
       if (dimensions.width !== dimensions.height) {
         addWarning(fileLabel, `${assets.logo} should be square`)
       }
-      if (dimensions.width < 512 || dimensions.height < 512) {
-        addWarning(fileLabel, `${assets.logo} is below the recommended 512x512px`)
+      if (dimensions.width < 128 || dimensions.height < 128) {
+        addWarning(fileLabel, `${assets.logo} is below the recommended 128x128px`)
       }
     }
   }
@@ -231,16 +231,16 @@ async function validateImageDimensions(projectDir, assets, fileLabel) {
 
     if (dimensions) {
       const ratio = dimensions.width / dimensions.height
-      if (Math.abs(ratio - 3) > 0.03) {
+      if (Math.abs(ratio - 800 / 300) > 0.03) {
         addWarning(
           fileLabel,
-          `${assets.featuredImage} should use a 3:1 aspect ratio`
+          `${assets.featuredImage} should use an 8:3 aspect ratio`
         )
       }
-      if (dimensions.width < 1200 || dimensions.height < 400) {
+      if (dimensions.width < 800 || dimensions.height < 300) {
         addWarning(
           fileLabel,
-          `${assets.featuredImage} is below the recommended 1200x400px`
+          `${assets.featuredImage} is below the recommended 800x300px`
         )
       }
     }

@@ -31,6 +31,6 @@ verusFeatures:
 # Optional images go next to this file. Featured images are optional. Wallets,
 # apps, and dashboards with one are eligible for the random 24-hour Featured
 # rotation on verus.io.
-# - logo.png/logo.jpg/logo.webp: 512x512px square
-# - featured.png/featured.jpg/featured.webp: 1200x400px, 3:1 aspect ratio
+# - logo.png/logo.jpg/logo.webp: 128x128px square
+# - featured.png/featured.jpg/featured.webp: 800x300px, 8:3 aspect ratio
 # - screenshot1.png through screenshot6.png: at least 1200px wide

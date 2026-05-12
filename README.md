@@ -23,13 +23,18 @@ Supported image filenames:
 - `featured.png`, `featured.jpg`, or `featured.webp`
 - `screenshot1.png` through `screenshot6.png`
 
+All images are optional. A featured image is only needed if the project should
+be eligible for the Featured section.
+
 Recommended image sizes:
 
 - Logo: `512x512px`, square, PNG or WebP preferred.
 - Featured image: `1200x400px`, `3:1` aspect ratio, PNG or WebP preferred.
 - Screenshots: at least `1200px` wide.
 
-Projects with a featured image can appear in the Featured section on verus.io.
+Projects with a featured image are eligible for a random 24-hour rotation in
+the Featured section on verus.io. The projects page shows up to 3 featured
+projects at a time.
 
 Project submissions are pull-request based so registry validation runs before
 anything is published.

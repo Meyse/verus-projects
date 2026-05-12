@@ -24,7 +24,8 @@ docsUrl: "https://docs.your-project.example"
 verusFeatures:
   - VerusID
 
-# Optional images go next to this file:
+# Optional images go next to this file. Featured images are optional; projects
+# with one are eligible for the random 24-hour Featured rotation on verus.io.
 # - logo.png/logo.jpg/logo.webp: 512x512px square
 # - featured.png/featured.jpg/featured.webp: 1200x400px, 3:1 aspect ratio
 # - screenshot1.png through screenshot6.png: at least 1200px wide

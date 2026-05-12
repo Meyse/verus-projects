@@ -1,5 +1,5 @@
-name: "markets.verus.trading"
-slug: "raw-verus-trading"
+name: "Verus Trading"
+slug: "verus-trading"
 description: "Barebones reserve data for Verus liquidity pools"
 longDescription: |
   markets.verus.trading provides direct reserve data for Verus basket currencies and liquidity pools.

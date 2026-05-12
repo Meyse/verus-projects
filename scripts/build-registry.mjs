@@ -252,8 +252,11 @@ async function validateImageDimensions(projectDir, assets, fileLabel) {
       `${fileLabel}/${screenshot}`
     )
 
-    if (dimensions && dimensions.width < 1200) {
-      addWarning(fileLabel, `${screenshot} should be at least 1200px wide`)
+    if (dimensions && Math.max(dimensions.width, dimensions.height) < 1200) {
+      addWarning(
+        fileLabel,
+        `${screenshot} should be at least 1200px on the longest edge`
+      )
     }
   }
 }

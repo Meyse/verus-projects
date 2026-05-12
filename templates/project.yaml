@@ -33,4 +33,4 @@ verusFeatures:
 # rotation on verus.io.
 # - logo.png/logo.jpg/logo.webp: 128x128px square
 # - featured.png/featured.jpg/featured.webp: 800x300px, 8:3 aspect ratio
-# - screenshot1.png through screenshot6.png: at least 1200px wide
+# - screenshot1.png through screenshot6.png: aim for at least 1200px on the longest edge

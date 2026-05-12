@@ -31,7 +31,8 @@ Recommended image sizes:
 
 - Logo: `128x128px`, square, PNG or WebP preferred.
 - Featured image: `800x300px`, `8:3` aspect ratio, PNG or WebP preferred.
-- Screenshots: at least `1200px` wide.
+- Screenshots: up to 6 native-resolution images, portrait or landscape. Aim for
+  at least `1200px` on the longest edge.
 
 Projects with a featured image are eligible for a random 24-hour rotation in
 the Featured section on verus.io when their category is `wallet`, `app`, or

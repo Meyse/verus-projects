@@ -1,0 +1,19 @@
+name: "Scan Verus"
+slug: "scan-verus"
+description: "Advanced Verus blockchain explorer and DeFi dashboard"
+longDescription: |
+  Scan Verus is an advanced blockchain explorer for the Verus network, combining chain search, market data, liquidity views, rich lists, conversions, rewards, bridge activity, identities, and network status in one interface.
+
+  ## Key features
+
+  - Search transactions, blocks, addresses, identities, and currencies
+  - Explore markets, liquidity, conversions, and rewards
+  - View rich lists, bridge activity, and network status
+  - Track identity and currency data across the Verus ecosystem
+
+category: "dashboard"
+websiteUrl: "https://scan.verus.cx"
+verusFeatures:
+  - Data
+  - Currencies
+  - DeFi

@@ -8,11 +8,19 @@ importers:
 
   .:
     dependencies:
+      image-size:
+        specifier: ^2.0.2
+        version: 2.0.2
       yaml:
         specifier: ^2.8.4
         version: 2.9.0
 
 packages:
+
+  image-size@2.0.2:
+    resolution: {integrity: sha512-IRqXKlaXwgSMAMtpNzZa1ZAe8m+Sa1770Dhk8VkSsP9LS+iHD62Zd8FQKs8fbPiagBE7BzoFX23cxFnwshpV6w==}
+    engines: {node: '>=16.x'}
+    hasBin: true
 
   yaml@2.9.0:
     resolution: {integrity: sha512-2AvhNX3mb8zd6Zy7INTtSpl1F15HW6Wnqj0srWlkKLcpYl/gMIMJiyuGq2KeI2YFxUPjdlB+3Lc10seMLtL4cA==}
@@ -20,5 +28,7 @@ packages:
     hasBin: true
 
 snapshots:
+
+  image-size@2.0.2: {}
 
   yaml@2.9.0: {}

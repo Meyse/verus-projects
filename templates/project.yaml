@@ -2,7 +2,7 @@ name: "Your project name"
 slug: "your-project-slug"
 description: "Short one-line description"
 longDescription: |
-  Describe what the project does and how it uses Verus.
+  Describe what the project does and how it uses Verus. Markdown is supported.
 
   ## Features
 
@@ -12,20 +12,25 @@ longDescription: |
 # wallet | app | dashboard | tool | other
 category: "app"
 
-# Optional, but recommended when the project is open source.
-repoUrl: "https://github.com/your-org/your-repo"
+# Optional project maintainer. Defaults to the GitHub repository owner when
+# repoUrl is provided, otherwise "Verus community".
+# maintainer: "Your name or organization"
 
-# Optional project links.
-websiteUrl: "https://your-project.example"
-docsUrl: "https://docs.your-project.example"
+# Optional, but recommended when the project is open source.
+# repoUrl: "https://github.com/your-org/your-repo"
+
+# Optional project links. Delete unused fields.
+# websiteUrl: "https://your-project.example"
+# docsUrl: "https://docs.your-project.example"
 
 # VerusID, Currencies, DeFi, Cross-chain, Zero-knowledge privacy,
 # Marketplace, Data, PBaaS-chain, Staking, Mining
 verusFeatures:
   - VerusID
 
-# Optional images go next to this file. Featured images are optional; projects
-# with one are eligible for the random 24-hour Featured rotation on verus.io.
+# Optional images go next to this file. Featured images are optional. Wallets,
+# apps, and dashboards with one are eligible for the random 24-hour Featured
+# rotation on verus.io.
 # - logo.png/logo.jpg/logo.webp: 512x512px square
 # - featured.png/featured.jpg/featured.webp: 1200x400px, 3:1 aspect ratio
 # - screenshot1.png through screenshot6.png: at least 1200px wide

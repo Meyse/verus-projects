@@ -2,6 +2,7 @@ import fs from 'node:fs/promises'
 import path from 'node:path'
 import {fileURLToPath} from 'node:url'
 
+import {imageSize} from 'image-size'
 import {parse} from 'yaml'
 
 const rootDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
@@ -38,9 +39,14 @@ const imageFilenames = [
 ]
 
 const errors = []
+const warnings = []
 
 function addError(file, message) {
   errors.push(`${file}: ${message}`)
+}
+
+function addWarning(file, message) {
+  warnings.push(`${file}: ${message}`)
 }
 
 function isRecord(value) {
@@ -186,6 +192,72 @@ async function detectAssets(projectDir) {
   return {featuredImage, logo, screenshots}
 }
 
+async function getImageDimensions(filePath, fileLabel) {
+  try {
+    return imageSize(await fs.readFile(filePath))
+  } catch (error) {
+    addWarning(
+      fileLabel,
+      `could not read image dimensions: ${
+        error instanceof Error ? error.message : String(error)
+      }`
+    )
+    return null
+  }
+}
+
+async function validateImageDimensions(projectDir, assets, fileLabel) {
+  if (assets.logo) {
+    const dimensions = await getImageDimensions(
+      path.join(projectDir, assets.logo),
+      `${fileLabel}/${assets.logo}`
+    )
+
+    if (dimensions) {
+      if (dimensions.width !== dimensions.height) {
+        addWarning(fileLabel, `${assets.logo} should be square`)
+      }
+      if (dimensions.width < 512 || dimensions.height < 512) {
+        addWarning(fileLabel, `${assets.logo} is below the recommended 512x512px`)
+      }
+    }
+  }
+
+  if (assets.featuredImage) {
+    const dimensions = await getImageDimensions(
+      path.join(projectDir, assets.featuredImage),
+      `${fileLabel}/${assets.featuredImage}`
+    )
+
+    if (dimensions) {
+      const ratio = dimensions.width / dimensions.height
+      if (Math.abs(ratio - 3) > 0.03) {
+        addWarning(
+          fileLabel,
+          `${assets.featuredImage} should use a 3:1 aspect ratio`
+        )
+      }
+      if (dimensions.width < 1200 || dimensions.height < 400) {
+        addWarning(
+          fileLabel,
+          `${assets.featuredImage} is below the recommended 1200x400px`
+        )
+      }
+    }
+  }
+
+  for (const screenshot of assets.screenshots) {
+    const dimensions = await getImageDimensions(
+      path.join(projectDir, screenshot),
+      `${fileLabel}/${screenshot}`
+    )
+
+    if (dimensions && dimensions.width < 1200) {
+      addWarning(fileLabel, `${screenshot} should be at least 1200px wide`)
+    }
+  }
+}
+
 async function firstExisting(directory, filenames) {
   for (const filename of filenames) {
     if (await fileExists(path.join(directory, filename))) return filename
@@ -273,6 +345,7 @@ async function readProject(directoryName) {
 
   const parsedRepo = parseGitHubUrl(repoUrl)
   const assets = await detectAssets(projectDir)
+  await validateImageDimensions(projectDir, assets, fileLabel)
 
   return {
     assetPath: `projects/${slug}`,
@@ -340,6 +413,10 @@ async function build() {
   if (errors.length > 0) {
     for (const error of errors) console.error(`- ${error}`)
     process.exit(1)
+  }
+
+  if (warnings.length > 0) {
+    for (const warning of warnings) console.warn(`! ${warning}`)
   }
 
   await fs.rm(distDir, {force: true, recursive: true})

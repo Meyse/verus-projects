@@ -9,6 +9,7 @@
     "check": "node scripts/build-registry.mjs --check"
   },
   "dependencies": {
+    "image-size": "^2.0.2",
     "yaml": "^2.8.4"
   }
 }

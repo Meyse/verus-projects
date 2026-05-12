@@ -1,0 +1,25 @@
+name: "VerusLending"
+slug: "make-protocol"
+description: "Peer-to-peer collateralized credit protocol on Verus"
+longDescription: |
+  VerusLending is a peer-to-peer collateralized credit protocol built from existing Verus features, including multisig vaults, atomic raw transactions, pre-signed time-locked transactions, currencies, and VerusID-backed marketplace data.
+
+  It lets two private parties enter a fixed-term loan agreement on chain, with cryptographic settlement, default, and rescue paths instead of an arbiter, committee, liquidation bot, or third-party intermediary.
+
+  ## Key features
+
+  - Peer-to-peer collateralized loans between two parties
+  - Atomic origination with collateral and principal exchanged on chain
+  - Pre-signed repayment and default-claim paths
+  - Cross-currency lending using Verus currencies
+  - VerusID marketplace data layer for offer discovery and reputation
+  - CLI recipes, helper utilities, protocol specs, and mainnet validation notes
+
+category: "tool"
+repoUrl: "https://github.com/Fried333/make-protocol"
+verusFeatures:
+  - VerusID
+  - Currencies
+  - DeFi
+  - Marketplace
+  - Data

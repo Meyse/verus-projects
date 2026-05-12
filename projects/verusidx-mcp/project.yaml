@@ -1,0 +1,27 @@
+name: "VerusIDX MCP Servers"
+slug: "verusidx-mcp"
+description: "Local MCP servers for AI agent access to the Verus blockchain"
+longDescription: |
+  VerusIDX MCP Servers gives MCP-compatible AI clients local access to Verus blockchain functionality through independent servers for chain discovery, identities, sending and converting funds, on-chain data, addresses, marketplace activity, and currency definition.
+
+  The servers run locally over stdio and connect to a user's own Verus daemon, with no cloud dependency, account, or API key required.
+
+  ## Key features
+
+  - Local MCP access to Verus daemon functionality
+  - Chain discovery and daemon health checks
+  - VerusID management and identity queries
+  - Currency sending, conversion, and cross-chain transfers
+  - On-chain data storage, retrieval, signing, and verification
+  - Read-only mode, spending limits, and audit logging for safer agent use
+
+category: "tool"
+repoUrl: "https://github.com/vdappdev2/verusidx-mcp"
+verusFeatures:
+  - VerusID
+  - Currencies
+  - DeFi
+  - Cross-chain
+  - Zero-knowledge privacy
+  - Marketplace
+  - Data

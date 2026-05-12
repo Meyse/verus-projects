@@ -1,0 +1,21 @@
+name: "vtimestamp"
+slug: "vtimestamp"
+description: "Privacy-first document timestamping on the Verus blockchain"
+longDescription: |
+  vtimestamp creates cryptographic proof that a document, invention, or creative work existed at a specific point in time.
+
+  Files are hashed locally in the browser, so documents never leave your device. Only the SHA-256 hash and timestamp metadata are published to the Verus blockchain and tied to a VerusID.
+
+  ## Key features
+
+  - Local file hashing with no document uploads
+  - Immutable timestamp proofs stored on-chain
+  - VerusID-bound ownership and verification
+  - Public verification without an account or login
+
+category: "app"
+repoUrl: "https://github.com/vdappdev2/vtimestamp"
+websiteUrl: "https://vtimestamp.com"
+verusFeatures:
+  - VerusID
+  - Data

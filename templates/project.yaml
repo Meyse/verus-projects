@@ -1,0 +1,25 @@
+name: "Your project name"
+slug: "your-project-slug"
+description: "Short one-line description"
+longDescription: |
+  Describe what the project does and how it uses Verus.
+
+  ## Features
+
+  - Feature one
+  - Feature two
+
+# wallet | app | dashboard | tool | other
+category: "app"
+
+# Optional, but recommended when the project is open source.
+repoUrl: "https://github.com/your-org/your-repo"
+
+# Optional project links.
+websiteUrl: "https://your-project.example"
+docsUrl: "https://docs.your-project.example"
+
+# VerusID, Currencies, DeFi, Cross-chain, Zero-knowledge privacy,
+# Marketplace, Data, PBaaS-chain, Staking, Mining
+verusFeatures:
+  - VerusID

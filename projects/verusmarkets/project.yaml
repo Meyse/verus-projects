@@ -1,0 +1,13 @@
+name: "VerusMarkets"
+slug: "verusmarkets"
+description: "Information about on-chain pricing, volume, reserves, and TVL"
+longDescription: |
+  VerusMarkets tracks decentralized on-chain currency pricing, volume, liquidity pool reserves, total value locked, and related market information.
+
+category: "dashboard"
+websiteUrl: "https://www.verusmarkets.com"
+verusFeatures:
+  - DeFi
+  - Currencies
+  - Data
+

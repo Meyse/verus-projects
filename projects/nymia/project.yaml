@@ -1,0 +1,21 @@
+name: "Nymia"
+slug: "nymia"
+description: "Decentralized desktop chat application"
+longDescription: |
+  Nymia is a secure decentralized desktop chat application that enables peer-to-peer messaging using Verus blockchain technology.
+
+  ## Key features
+
+  - Decentralized messaging
+  - VerusID-based identity
+  - Cryptographically signed messages
+  - Privacy-focused local data handling
+  - Serverless architecture
+
+category: "app"
+repoUrl: "https://github.com/Meyse/nymia-desktop"
+websiteUrl: "https://nymia.app"
+verusFeatures:
+  - VerusID
+  - Zero-knowledge privacy
+

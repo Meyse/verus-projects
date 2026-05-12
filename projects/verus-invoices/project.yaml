@@ -1,0 +1,15 @@
+name: "Verus Invoices"
+slug: "verus-invoices"
+description: "Web application for creating Verus payment invoices"
+longDescription: |
+  Verus Invoices is a web-based tool for creating payment invoices that can be shared and used with Verus Mobile.
+
+  It provides a simple interface for generating Verus-compatible payment requests and invoice formats.
+
+category: "app"
+repoUrl: "https://github.com/Meyse/convert-invoices-main"
+websiteUrl: "https://www.verusinvoices.com"
+verusFeatures:
+  - VerusID
+  - Currencies
+

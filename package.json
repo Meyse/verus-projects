@@ -1,0 +1,14 @@
+{
+  "name": "verus-projects",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.29.2",
+  "scripts": {
+    "build": "node scripts/build-registry.mjs",
+    "check": "node scripts/build-registry.mjs --check"
+  },
+  "dependencies": {
+    "yaml": "^2.8.4"
+  }
+}

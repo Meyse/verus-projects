@@ -1,0 +1,11 @@
+name: "VaultAlert"
+slug: "vaultalert"
+description: "Tool for checking Verus Vault status on a VerusID"
+longDescription: |
+  VaultAlert is a focused tool for checking the status of Verus Vault on a VerusID.
+
+category: "tool"
+websiteUrl: "https://www.vaultalert.net"
+verusFeatures:
+  - VerusID
+

@@ -1,0 +1,13 @@
+name: "Faldt's Cryptodashboard"
+slug: "faldts-cryptodashboard"
+description: "Dashboard for basket currencies, TVL, volume, and ecosystem data"
+longDescription: |
+  Faldt's Cryptodashboard collects Verus ecosystem metrics in one place, including basket currency reserves, total value locked, conversion volume, and market information.
+
+category: "dashboard"
+websiteUrl: "https://cryptodashboard.faldt.net"
+verusFeatures:
+  - DeFi
+  - Currencies
+  - Data
+

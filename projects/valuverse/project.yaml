@@ -1,0 +1,12 @@
+name: "ValuVerse"
+slug: "valuverse"
+description: "Metaverse environment using .valuid VerusID login"
+longDescription: |
+  ValuVerse is a metaverse environment where users can log in with a .valuid VerusID, explore, meet, and transact.
+
+category: "app"
+websiteUrl: "https://live.valuverse.net/auth"
+verusFeatures:
+  - VerusID
+  - Marketplace
+

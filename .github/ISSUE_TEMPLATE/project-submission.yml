@@ -1,0 +1,87 @@
+name: Submit a Verus project
+description: Share a project for the Verus ecosystem registry.
+title: 'Project submission: '
+labels:
+  - project submission
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form if opening a pull request is not convenient. A maintainer can turn accepted submissions into registry entries.
+  - type: input
+    id: name
+    attributes:
+      label: Project name
+    validations:
+      required: true
+  - type: input
+    id: slug
+    attributes:
+      label: Project slug
+      description: Lowercase letters, numbers, and hyphens only.
+      placeholder: my-verus-project
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Short description
+      description: One sentence, 220 characters or less.
+    validations:
+      required: true
+  - type: textarea
+    id: long-description
+    attributes:
+      label: Long description
+      description: What does this project do, and how does it use Verus?
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - wallet
+        - app
+        - dashboard
+        - tool
+        - other
+    validations:
+      required: true
+  - type: input
+    id: repo
+    attributes:
+      label: GitHub repository URL
+      placeholder: https://github.com/your-org/your-repo
+  - type: input
+    id: website
+    attributes:
+      label: Website URL
+      placeholder: https://example.com
+  - type: input
+    id: docs
+    attributes:
+      label: Documentation URL
+      placeholder: https://docs.example.com
+  - type: checkboxes
+    id: features
+    attributes:
+      label: Verus features used
+      options:
+        - label: VerusID
+        - label: Currencies
+        - label: DeFi
+        - label: Cross-chain
+        - label: Zero-knowledge privacy
+        - label: Marketplace
+        - label: Data
+        - label: PBaaS-chain
+        - label: Staking
+        - label: Mining
+    validations:
+      required: true
+  - type: textarea
+    id: images
+    attributes:
+      label: Images
+      description: Attach logo, screenshot, or featured images here if available.

@@ -1,0 +1,15 @@
+name: "Valu"
+slug: "valu"
+description: "People-powered verified community network economies"
+longDescription: |
+  Valu combines Verus blockchain technology, zero-knowledge privacy, AI, social messengers, and mixed reality to create people-powered verified community network economies.
+
+  It focuses on connecting physical and digital community activity while giving users ownership, privacy, and collaboration tools.
+
+category: "app"
+websiteUrl: "https://www.valu.earth"
+verusFeatures:
+  - VerusID
+  - Zero-knowledge privacy
+  - Marketplace
+

@@ -49,8 +49,8 @@ pnpm install
 pnpm check
 ```
 
-Validation fails for invalid YAML, unsupported field values, unsafe URLs, and
-unsupported filenames. Image dimensions are reported as warnings so maintainers
-can catch layout issues without blocking existing projects.
+Validation fails for invalid YAML, unsupported field values, non-HTTPS URLs,
+and unsupported filenames. Image dimensions are reported as warnings so
+maintainers can catch layout issues without blocking existing projects.
 
 The build writes `dist/projects.json` and copies registry assets into `dist/projects/`.

@@ -39,15 +39,18 @@
     },
     "repoUrl": {
       "type": "string",
-      "format": "uri"
+      "format": "uri",
+      "pattern": "^https://"
     },
     "websiteUrl": {
       "type": "string",
-      "format": "uri"
+      "format": "uri",
+      "pattern": "^https://"
     },
     "docsUrl": {
       "type": "string",
-      "format": "uri"
+      "format": "uri",
+      "pattern": "^https://"
     },
     "maintainer": {
       "type": "string",

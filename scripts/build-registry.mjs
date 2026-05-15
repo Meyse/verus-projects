@@ -75,10 +75,9 @@ function validateUrl(file, data, key, {github = false} = {}) {
 
   try {
     const url = new URL(value)
-    const allowedProtocol = url.protocol === 'https:' || url.protocol === 'http:'
 
-    if (!allowedProtocol || !url.hostname) {
-      addError(file, `${key} must be an http or https URL`)
+    if (url.protocol !== 'https:' || !url.hostname) {
+      addError(file, `${key} must be an https URL`)
       return undefined
     }
 
@@ -101,12 +100,20 @@ function validateUrl(file, data, key, {github = false} = {}) {
 function parseGitHubUrl(url) {
   if (!url) return null
 
-  const match = url.match(/github\.com\/([^/]+)\/([^/]+)/)
-  if (!match) return null
+  try {
+    const parsed = new URL(url)
+    const [owner, repo] = parsed.pathname.split('/').filter(Boolean)
+    const isGitHubHost =
+      parsed.hostname === 'github.com' || parsed.hostname === 'www.github.com'
 
-  return {
-    owner: match[1],
-    repo: match[2].replace(/\.git$/, ''),
+    if (!isGitHubHost || !owner || !repo) return null
+
+    return {
+      owner,
+      repo: repo.replace(/\.git$/, ''),
+    }
+  } catch {
+    return null
   }
 }
 

@@ -34,9 +34,9 @@ Recommended image sizes:
 - Screenshots: up to 6 native-resolution images, portrait or landscape. Aim for
   at least `1200px` on the longest edge.
 
-Projects with a featured image are eligible for a random 24-hour rotation in
-the Featured section on verus.io when their category is `wallet`, `app`, or
-`dashboard`. The projects page shows up to 3 featured projects at a time.
+Projects with a featured image are eligible for the Featured section on
+verus.io when their category is `wallet`, `app`, or `dashboard`. The projects
+page shows up to 3 featured projects at a time.
 
 Project submissions are pull-request based so registry validation runs before
 anything is published. After a pull request is merged, GitHub Pages republishes

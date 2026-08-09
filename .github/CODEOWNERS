@@ -1,0 +1,5 @@
+/.github/workflows/ @Meyse
+/scripts/ @Meyse
+/schema/ @Meyse
+/package.json @Meyse
+/pnpm-lock.yaml @Meyse

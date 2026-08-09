@@ -40,17 +40,20 @@
     "repoUrl": {
       "type": "string",
       "format": "uri",
-      "pattern": "^https://"
+      "pattern": "^https://(?:www\\.)?github\\.com/[^/]+/[^/?#]+/?$",
+      "maxLength": 2048
     },
     "websiteUrl": {
       "type": "string",
       "format": "uri",
-      "pattern": "^https://"
+      "pattern": "^https://",
+      "maxLength": 2048
     },
     "docsUrl": {
       "type": "string",
       "format": "uri",
-      "pattern": "^https://"
+      "pattern": "^https://",
+      "maxLength": 2048
     },
     "maintainer": {
       "type": "string",
@@ -59,6 +62,8 @@
     "verusFeatures": {
       "type": "array",
       "minItems": 1,
+      "maxItems": 10,
+      "uniqueItems": true,
       "items": {
         "type": "string",
         "enum": [

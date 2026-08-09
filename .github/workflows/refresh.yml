@@ -1,0 +1,17 @@
+name: Refresh registry metadata
+
+on:
+  schedule:
+    - cron: '17 3 * * *'
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  refresh:
+    if: github.ref == 'refs/heads/main'
+    permissions:
+      contents: read
+      id-token: write
+      pages: write
+    uses: ./.github/workflows/deploy-registry.yml

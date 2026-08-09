@@ -6,10 +6,11 @@
   "packageManager": "pnpm@10.29.2",
   "scripts": {
     "build": "node scripts/build-registry.mjs",
-    "check": "node scripts/build-registry.mjs --check"
+    "check": "node scripts/build-registry.mjs --check",
+    "test": "node --test tests/*.test.mjs"
   },
   "dependencies": {
-    "image-size": "^2.0.2",
+    "sharp": "0.35.3",
     "yaml": "^2.8.4"
   }
 }

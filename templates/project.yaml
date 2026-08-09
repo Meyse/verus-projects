@@ -2,7 +2,9 @@ name: "Your project name"
 slug: "your-project-slug"
 description: "Short one-line description"
 longDescription: |
-  Describe what the project does and how it uses Verus. Markdown is supported.
+  Describe what the project does and how it uses Verus. Text formatting such as
+  headings, lists and emphasis is supported. Links and embedded images are not
+  rendered; use the reviewed URL fields below instead.
 
   ## Features
 
@@ -34,3 +36,6 @@ verusFeatures:
 # - logo.png/logo.jpg/logo.webp: 128x128px square
 # - featured.png/featured.jpg/featured.webp: 800x300px, 8:3 aspect ratio
 # - screenshot1.png through screenshot6.png: aim for at least 1200px on the longest edge
+# Images must be PNG, JPEG or WebP; each file is limited to 5 MiB, 40 megapixels
+# and 8192px on either edge. Published images are decoded, stripped of metadata
+# and re-encoded during registry publication.

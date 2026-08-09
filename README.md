@@ -27,6 +27,12 @@ Supported image filenames:
 All images are optional. A featured image is only needed if the project should
 be eligible for the Featured section.
 
+Each image must contain real PNG, JPEG, or WebP data matching its extension.
+Images are limited to 5 MiB, 40 megapixels, and 8192 pixels on either edge, with
+a 20 MiB total per project. Animated and multi-page images are not supported.
+Publication decodes, strips metadata from, and re-encodes every image rather
+than serving submitted bytes directly.
+
 Recommended image sizes:
 
 - Logo: `128x128px`, square, PNG or WebP preferred.
@@ -42,6 +48,12 @@ Project submissions are pull-request based so registry validation runs before
 anything is published. After a pull request is merged, GitHub Pages republishes
 the registry and the website can take up to 24 hours to pick up the new data.
 
+Project YAML is limited to 32 KiB. URLs must use HTTPS and are limited to 2048
+characters. `verusFeatures` must contain between 1 and 10 unique supported
+values. Long descriptions support text formatting, headings, lists, quotes,
+and code. Markdown links, raw HTML, and embedded images are not rendered on
+verus.io; use `repoUrl`, `websiteUrl`, and `docsUrl` for reviewed outbound links.
+
 ## Validate locally
 
 ```bash
@@ -49,8 +61,11 @@ pnpm install
 pnpm check
 ```
 
-Validation fails for invalid YAML, unsupported field values, non-HTTPS URLs,
-and unsupported filenames. Image dimensions are reported as warnings so
-maintainers can catch layout issues without blocking existing projects.
+Validation fails for invalid or oversized YAML, unknown fields, unsupported
+field values, non-HTTPS URLs, duplicate image slots, unsafe filesystem entries,
+and images that do not pass format and resource checks. Recommended image
+dimensions remain warnings so maintainers can catch layout issues without
+blocking existing projects.
 
-The build writes `dist/projects.json` and copies registry assets into `dist/projects/`.
+`pnpm check` does not contact GitHub or write `dist`. The publishing build writes
+`dist/projects.json` and sanitized registry assets into `dist/projects/`.
